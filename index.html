@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>This is a simple exercise</title>
+    <style>
+    #outside {
+        border: 2px solid black;
+        margin: auto;
+        width: 90%;
+    }
+    .one {
+        border: 2px solid black;
+        border-radius: 50%;
+    }
+    .two {
+        border: 2px solid black;
+        width: 12%;
+        border-radius: 3px;
+        overflow: auto;
+    }
+    .content {
+        border: 2px solid black;
+        margin-left: 35px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 15%;
+        height: 20px;
+    }
+    .text {
+        margin-left: 10px;
+        margin-bottom: 300px;
+        clear: both;
+    }
+    .down {
+        border-top: 2px solid black;
+    }
+    .content1 {
+        float: left;
+        margin: 35px;
+        width: 200px;
+        height: 100px;
+        padding-bottom: 20px;
+        font-size: 120%;
+    }
+    .att {
+        margin: 10px;
+        font-size: 80%;
+    }
+    #title {
+        font-size: 130%;
+        margin: 10px;
+    }
+    .m {
+        border: 2px solid blue;}
+    .f {
+        border: 2px solid red;
+    }
+    @media screen and (min-width: 1200px) {
+        .content-lg {
+            width: 20%;
+            margin-left: 2%;
+            margin-right: 2%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+    }
+     @media screen and (max-width: 1200px) {
+        .content-md {
+            width: 40%;
+            margin-left: 4%;
+            margin-right: 4%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .input-sm {
+            margin-left: 15%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            width: 70%;
+            display: block;
+        }
+        .button-sm {
+            margin-left: 15%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            width: 70%;
+            display: block;
+        }
+        .content-sm {
+            margin-left: 15%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            width: 70%;
+            display: inline-block;
+        }
+    }
+    </style>
+</head>
+
+<body ng-app="myApp" ng-controller="myController">
+    <div id="outside" class="row">
+        <div ng-init="lists =[
+        { Title: 'Foo ', Age: '30', City: 'Brooklyn' ,Gender:'m'},
+        { Title: 'Foo1 ', Age: '54', City: 'Cleveland' ,Gender:'f'},
+        { Title: 'Food ', Age: '24', City: 'San Francisco' ,Gender:'m'},
+        { Title: 'my food guy ', Age: '38', City: 'Menlo Park' ,Gender:'f'}
+        ]">
+        </div>
+        <div id="up">
+            <div>
+                <input class="content input-sm" type="search" ng-model="serchText">
+                <button class="two button-sm" type="button">Search</button>
+            </div>
+        </div>
+        <div class="down">
+            <div ng-repeat="list in lists | filter:serchText" ng-hide="abc">
+                <div class="content1 content-sm content-md content-lg" ng-class="list.Gender">
+                    <div id="title">{{list.Title}}</div>
+                    <div class="att">Age: {{list.Age}}</div>
+                    <div class="att">City: {{list.City}}</div>
+                </div>
+            </div>
+            <div style="clear:both;"></div>
+        </div>
+        <div ng-hide="aaa">
+            <p class="text">Please input a search query</p>
+        </div>
+    </div>
+    // <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script type="text/javascript">
+    var app = angular.module('myApp', []);
+    app.controller('myController', function($scope) {
+        $scope.abc = true;
+        $scope.$watch('serchText', function() {
+            if ($scope.serchText === '' || $scope.serchText == null) {
+                $scope.abc = true;
+                $scope.aaa = false;
+            } else {
+                $scope.abc = false;
+                $scope.aaa = true;
+            }
+        });
+
+    });
+    </script>
+</body>
+
+</html>

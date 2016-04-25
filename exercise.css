@@ -1,0 +1,102 @@
+/*#outside{
+	border:2px solid black;
+	margin: auto;
+	width:90%;
+}
+.one{
+	border:2px solid black;
+	border-radius: 50%;
+}
+.two{
+	border:2px solid black;
+	width:12%;
+	border-radius: 3px;
+	overflow: auto;
+
+}
+.content{
+	border: 2px solid black;
+	margin-left: 35px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	width:15%;
+	height:20px;
+}
+.text{
+	margin-left: 10px;
+	margin-bottom: 300px;
+	clear: both;
+}
+.down{
+	border-top: 2px solid black;
+}
+.content1{
+	float:left ;
+	margin:35px;
+	width:200px;
+	height:100px;
+	padding-bottom:20px;
+	font-size: 120%;
+}
+.att{
+	margin: 10px;
+    font-size: 80%;
+}
+#title{
+	font-size: 130%;
+	margin:10px;
+}
+.m {
+	border: 2px solid blue;
+}
+.f {
+	border: 2px solid red;
+}
+
+@media screen and (min-width: 1200px) {
+	.content-lg {
+		width: 20%;
+		margin-left: 2%;
+		margin-right: 2%;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		display: inline-block;
+	}
+
+}
+
+@media screen and (max-width: 1200px) {
+	.content-md {
+		width: 40%;
+		margin-left: 4%;
+		margin-right: 4%;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		display: inline-block;
+	}
+
+}
+
+@media screen and (max-width: 768px) {
+	.input-sm {
+		margin-left: 15%;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		width: 70%;
+		display: block;
+	}
+	.button-sm {
+		margin-left: 15%;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		width: 70%;
+		display: block;
+	}
+	.content-sm {
+		margin-left: 15%;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		width: 70%;
+		display: inline-block;
+	}
+}*/
